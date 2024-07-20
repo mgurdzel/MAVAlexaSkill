@@ -11,8 +11,8 @@ Dieses Projekt zielt darauf ab, einen Flurförderroboter mithilfe von Sprachbefe
 
 ## Projektstruktur
 - **Skill Definition**
-     - **Interaction Model**: Definiert die Intents, Slots und Sprachmuster. Die Daten befinden sich im Ordner /interactionModels/custom als exportierte JSON Datei
-     - **Backend-Logik**: AWS Lambda Funktion, die die Anfragen verarbeitet und entsprechende Antworten generiert. Die Daten befinden sich im Ordner /lambda/. Die Backend Logik wurde in diesem Projekt mit Hilfe von Python aufgebaut.
+     - **Interaction Model**: Definiert die Intents, Slots und Sprachmuster. Die Daten befinden sich im Ordner `/interactionModels/custom` als exportierte JSON Datei
+     - **Backend-Logik**: AWS Lambda Funktion, die die Anfragen verarbeitet und entsprechende Antworten generiert. Die Daten befinden sich im Ordner `/lambda/`. Die Backend Logik wurde in diesem Projekt mit Hilfe von Python aufgebaut.
 
 ## Importieren der vorhandenen Daten
 
