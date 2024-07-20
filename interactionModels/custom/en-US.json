@@ -1,0 +1,305 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "45",
+                    "15",
+                    "180",
+                    "270",
+                    "150",
+                    "195",
+                    "360",
+                    "240",
+                    "120",
+                    "285",
+                    "165",
+                    "330",
+                    "210",
+                    "255",
+                    "135",
+                    "300",
+                    "345",
+                    "225",
+                    "105",
+                    "90",
+                    "315",
+                    "60",
+                    "30",
+                    "75"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.547589765984.714442175242.1561893508304"
+                }
+              ],
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveRightIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "45",
+                    "15",
+                    "180",
+                    "270",
+                    "150",
+                    "195",
+                    "360",
+                    "240",
+                    "120",
+                    "285",
+                    "165",
+                    "330",
+                    "210",
+                    "255",
+                    "135",
+                    "300",
+                    "345",
+                    "225",
+                    "105",
+                    "90",
+                    "315",
+                    "60",
+                    "30",
+                    "75"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.1359860695904.1171207159166.1105295509636"
+                }
+              ],
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveLeftIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveForwardIntent",
+          "samples": [
+            "drive forward",
+            "move forward",
+            "move {distance} {unit} forward",
+            "move forward by {distance} {unit}",
+            "drive {distance}  {unit} forward"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveBackwardsIntent",
+          "samples": [
+            "drive backward",
+            "move backward",
+            "move {distance} {unit} backward",
+            "move backward by {distance} {unit}",
+            "drive {distance}  {unit} backward"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveRightIntent",
+          "samples": [
+            "turn right",
+            "drive right",
+            "drive to the right",
+            "turn {angle} {unit} right",
+            "move to the right",
+            "move {angle} {unit} to the right",
+            "drive {angle} {unit} to the right",
+            "turn {angle} {unit} to the right"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveLeftIntent",
+          "samples": [
+            "drive left",
+            "drive to the left",
+            "turn {angle} {unit} left",
+            "move to the left",
+            "move {angle} {unit} to the left",
+            "drive {angle} {unit} to the left",
+            "turn {angle} {unit} to the left"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "StopDrivingIntent",
+          "samples": [
+            "stop",
+            "stop the mav"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ConfirmationIntent",
+          "samples": [
+            "do it",
+            "agree",
+            "yes please do it",
+            "yes do it",
+            "yes"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "m"
+                ],
+                "value": "meter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "cm"
+                ],
+                "value": "centimeter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "degrees",
+                  "dgr",
+                  "°"
+                ],
+                "value": "degree"
+              }
+            }
+          ],
+          "name": "MeasurementUnit"
+        }
+      ],
+      "invocationName": "the robot"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter a valid steering angle between fifteen and three hundred and sixty."
+          },
+          {
+            "type": "PlainText",
+            "value": "Please enter the steering angle in fifteen degree increments."
+          }
+        ],
+        "id": "Slot.Validation.547589765984.714442175242.1561893508304"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Please enter a valid steering angle between fifteen and three hundred and sixty."
+          },
+          {
+            "type": "PlainText",
+            "value": "Please enter the steering angle in fifteen degree increments."
+          }
+        ],
+        "id": "Slot.Validation.1359860695904.1171207159166.1105295509636"
+      }
+    ]
+  }
+}

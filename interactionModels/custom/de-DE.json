@@ -1,0 +1,538 @@
+{
+  "interactionModel": {
+    "dialog": {
+      "intents": [
+        {
+          "slots": [
+            {
+              "name": "pointname",
+              "elicitationRequired": false,
+              "type": "points",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveToPointIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.1278514290454"
+          }
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "45",
+                    "15",
+                    "180",
+                    "270",
+                    "150",
+                    "195",
+                    "360",
+                    "240",
+                    "120",
+                    "285",
+                    "165",
+                    "330",
+                    "210",
+                    "255",
+                    "135",
+                    "300",
+                    "345",
+                    "225",
+                    "105",
+                    "90",
+                    "315",
+                    "60",
+                    "30",
+                    "75"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.1379035210857.957193321503.1122900715198"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.1379035210857.957193321503.1594550044064",
+                  "value": "15"
+                }
+              ],
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveLeftIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "45",
+                    "15",
+                    "180",
+                    "270",
+                    "150",
+                    "195",
+                    "360",
+                    "240",
+                    "120",
+                    "285",
+                    "165",
+                    "330",
+                    "210",
+                    "255",
+                    "135",
+                    "300",
+                    "345",
+                    "225",
+                    "105",
+                    "90",
+                    "315",
+                    "60",
+                    "30",
+                    "75"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.673738369983.433736596699.757043828154"
+                },
+                {
+                  "type": "isGreaterThanOrEqualTo",
+                  "prompt": "Slot.Validation.673738369983.433736596699.799046245878",
+                  "value": "15"
+                }
+              ],
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveRightIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "angle_wert",
+              "elicitationRequired": false,
+              "validations": [
+                {
+                  "values": [
+                    "45",
+                    "15",
+                    "60",
+                    "30"
+                  ],
+                  "type": "isInSet",
+                  "prompt": "Slot.Validation.38549523730.583949154201.1371883970892"
+                }
+              ],
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "testIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        },
+        {
+          "slots": [
+            {
+              "name": "distance",
+              "elicitationRequired": false,
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "unit",
+              "elicitationRequired": false,
+              "type": "MeasurementUnit",
+              "confirmationRequired": false,
+              "prompts": {}
+            }
+          ],
+          "name": "DriveForwardIntent",
+          "confirmationRequired": false,
+          "prompts": {}
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "languageModel": {
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": [
+            "mach nicht",
+            "lass mal",
+            "nein",
+            "nö"
+          ]
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "slots": [],
+          "name": "HelloWorldIntent",
+          "samples": [
+            "hallo",
+            "wie geht\u0027s dir",
+            "sag hallo welt",
+            "sag hallo"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveForwardIntent",
+          "samples": [
+            "fahre {distance} {unit} vorwärts",
+            "fahre um {distance} {unit} vorwärts",
+            "bewege dich {distance} {unit} vorwärts",
+            "bewege dich vorwärts",
+            "fahre nach vorne",
+            "fahre geradeaus",
+            "fahre vorwärts"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "distance",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveBackwardsIntent",
+          "samples": [
+            "fahre {distance} {unit} rückwärts",
+            "fahre um {distance} {unit} rückwärts",
+            "bewege dich {distance} {unit} rückwärts",
+            "bewege dich rückwärts",
+            "fahre nach hinten",
+            "fahre zurück",
+            "fahre rückwärts"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "StopDrivingIntent",
+          "samples": [
+            "stoppe den mav",
+            "stehen bleiben",
+            "anhalten",
+            "halt an",
+            "Stopp",
+            "Halt",
+            "bleib stehen"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveRightIntent",
+          "samples": [
+            "drehe dich {angle} {unit} nach rechts",
+            "fahre {angle} {unit} nach rechts",
+            "bewege dich um {angle} {unit} nach rechts",
+            "drehe dich um {angle} {unit} nach rechts",
+            "bewege dich nach rechts",
+            "fahre nach rechts"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "angle",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "DriveLeftIntent",
+          "samples": [
+            "drehe dich {angle} {unit} nach links",
+            "fahre {angle} {unit} nach links",
+            "bewege dich um {angle} {unit} nach links",
+            "drehe dich um {angle} {unit} nach links",
+            "bewege dich nach links",
+            "fahre nach links"
+          ]
+        },
+        {
+          "slots": [],
+          "name": "ConfirmationIntent",
+          "samples": [
+            "ok",
+            "ja",
+            "alles klar",
+            "mach weiter",
+            "okay",
+            "ja mach"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "pointname",
+              "type": "points"
+            }
+          ],
+          "name": "DriveToPointIntent",
+          "samples": [
+            "bewege dich zu punkt {pointname}",
+            "fahre zu punkt {pointname}"
+          ]
+        },
+        {
+          "slots": [
+            {
+              "name": "angle_wert",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "unit",
+              "type": "MeasurementUnit"
+            }
+          ],
+          "name": "testIntent",
+          "samples": [
+            "fahre {angle_wert} {unit} nach oben"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "synonyms": [
+                  "°",
+                  "grad"
+                ],
+                "value": "Grad"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "cm"
+                ],
+                "value": "Zentimeter"
+              }
+            },
+            {
+              "name": {
+                "synonyms": [
+                  "m"
+                ],
+                "value": "Meter"
+              }
+            }
+          ],
+          "name": "MeasurementUnit"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "G"
+              }
+            },
+            {
+              "name": {
+                "value": "F"
+              }
+            },
+            {
+              "name": {
+                "value": "E"
+              }
+            },
+            {
+              "name": {
+                "value": "D"
+              }
+            },
+            {
+              "name": {
+                "value": "C"
+              }
+            },
+            {
+              "name": {
+                "value": "B"
+              }
+            },
+            {
+              "name": {
+                "value": "A"
+              }
+            }
+          ],
+          "name": "points"
+        }
+      ],
+      "invocationName": "marvin den roboter"
+    },
+    "prompts": [
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Soll der MAV wirklich zu Punkt {pointname} fahren?"
+          }
+        ],
+        "id": "Confirm.Intent.1278514290454"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Zu welchem Punkt soll ich fahren?"
+          }
+        ],
+        "id": "Elicit.Slot.1287623667714.205911049609"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe einen Drehwinkel an der durch fünfzehn teilbar ist."
+          }
+        ],
+        "id": "Slot.Validation.850681923648.222647935715.611292415581"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe einen gültigen Wert an"
+          }
+        ],
+        "id": "Slot.Validation.495301914633.403367977068.737383975638"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe einen gültigen Wert an"
+          }
+        ],
+        "id": "Slot.Validation.38549523730.583949154201.1371883970892"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe den Lenkwinkel in fünfzehn Grad Schritten an."
+          },
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe einen gültigen Lenkwinkel zwischen fünfzehn und dreihundertsechzig an."
+          }
+        ],
+        "id": "Slot.Validation.673738369983.433736596699.757043828154"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Der minimale Lenkwinkel beträgt fünfzehn Grad. Bitte gebe einen Lenkwinkel zwischen fünfzehn und dreihundertsechzig an."
+          }
+        ],
+        "id": "Slot.Validation.673738369983.433736596699.799046245878"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe einen gültigen Lenkwinkel zwischen fünfzehn und dreihundertsechzig an."
+          },
+          {
+            "type": "PlainText",
+            "value": "Bitte gebe den Lenkwinkel in fünfzehn Grad Schritten an."
+          }
+        ],
+        "id": "Slot.Validation.1379035210857.957193321503.1122900715198"
+      },
+      {
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Der minimale Lenkwinkel beträgt fünfzehn Grad. Bitte gebe einen Lenkwinkel zwischen fünfzehn und dreihundertsechzig an."
+          }
+        ],
+        "id": "Slot.Validation.1379035210857.957193321503.1594550044064"
+      }
+    ]
+  }
+}
