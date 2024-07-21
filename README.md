@@ -2,7 +2,7 @@
 # Alexa Skill: Project MARV
 
 ## Projektbeschreibung
-Dieses Projekt zielt darauf ab, einen Flurförderroboter mithilfe von Sprachbefehlen über Alexa zu steuern. Der Alexa Skill ermöglicht es dem Benutzer, verschiedene Befehle an den Roboter zu senden, um seine Bewegungen und Aktionen zu kontrollieren.
+Dieses Projekt zielt darauf ab, einen AGV (Automated Guided Vehicle) mithilfe von Sprachbefehlen über Alexa zu steuern. Der Alexa Skill ermöglicht es dem Benutzer, verschiedene Befehle an den Roboter zu senden, um seine Bewegungen und Aktionen zu kontrollieren.
 
 ## Vorraussetzungen
 - Alexa Developer Console Zugang
