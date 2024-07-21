@@ -1,7 +1,7 @@
 # Alexa Skill: Project MARV
 
 ## Project Description
-This project aims to control a vehicle robot using voice commands via Alexa. The Alexa Skill enables the user to send various commands to the robot to control its movements and actions.
+This project aims to control a AGV (Automated Guided Vehicle) using voice commands via Alexa. The Alexa Skill enables the user to send various commands to the robot to control its movements and actions.
 
 ## Requirements
 - Access to Alexa Developer Console
